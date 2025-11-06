@@ -1,0 +1,19 @@
+package com.example.utils;
+
+public class StringUtils {
+
+    public boolean isPalindrome(String input) {
+        if (input == null) return false;
+        String cleaned = input.replaceAll("\\s+", "").toLowerCase();
+        return new StringBuilder(cleaned).reverse().toString().equals(cleaned);
+    }
+
+    public String reverse(String input) {
+        if (input == null) return null;
+        return new StringBuilder(input).reverse().toString();
+    }
+
+    public boolean isBlank(String input) {
+        return input == null || input.trim().isEmpty();
+    }
+}
